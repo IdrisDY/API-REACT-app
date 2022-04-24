@@ -10,6 +10,10 @@ function App() {
 <GitUsers/>
 <FetchUsers/>
 <Ouser/>
+<div className='flex '>
+<p> lorem ipsum mghfmd;</p>
+<p> Adekyradgs</p>
+ </div>
     </>
   );
 }

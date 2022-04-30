@@ -3,17 +3,13 @@ import './App.css';
 import GitUsers from './Components/gitUsers';
 import FetchUsers from './Components/FetchUsers';
 import Ouser from './Components/SecUser';
+import Thors from './Components/Tours';
+import Errexample from './Components/Errexamp';
 
 function App() {
   return (
     <>
-<GitUsers/>
-<FetchUsers/>
-<Ouser/>
-<div className='flex '>
-<p> lorem ipsum mghfmd;</p>
-<p> Adekyradgs</p>
- </div>
+ <Errexample/>
     </>
   );
 }

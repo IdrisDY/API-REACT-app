@@ -14,7 +14,7 @@ useEffect(()=>{
 
 if (isLoading){
       return(
-         <div> Loading</div>
+         <div> </div>
       )}
       if(isError){
          return(

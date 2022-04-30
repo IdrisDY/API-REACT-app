@@ -9,7 +9,7 @@ useEffect(()=>{
 })
    return(
       <>
-         <div className=" flex font-bold"> Users {value} </div>
+         <div className=" flex justify-center items-center font-bold"> Users {value} </div>
          <button onClick={() =>setValue(value+1)}> Click me please </button>
       </>
    )

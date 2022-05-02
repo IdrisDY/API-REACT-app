@@ -40,13 +40,13 @@ const currentPosts = posts.slice(indexofFirstPost,  indexofLastpost)
    return(
 
       <div> 
-      
+     <span> My Blog</span>
       <h1>
          { currentPosts.map((post)=>{
             const{id,  title } = post;
-            return(<div key={id} className="   flex  justify-evenly bg-cyan-500 m-5 border font-1 list-disc">
-           <span> No{id}</span>
-           <p className="w-100% flex flex-col"> {title} </p> 
+            return(<div key={id} className="   flex  w-1/2 justify-between  m-2 border font-1 list-disc">
+           <span className="text-sm"> No{id}</span>
+           <p className="w-100% flex text-sm flex-col text-black"> {title} </p> 
              </div>)
          })}
       </h1>

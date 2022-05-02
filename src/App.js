@@ -6,11 +6,12 @@ import Ouser from './Components/SecUser';
 import Thors from './Components/Tours';
 import Errexample from './Components/Errexamp';
 import Page from './Pagination/page';
+import TextGen from './Components/Text-Generator/text-gen';
 
 function App() {
   return (
     <>
- <Page/>
+ <TextGen/>
     </>
   );
 }

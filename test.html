@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+      class Main extends React.Component{
+         
+      render(){
+         //the items object is in the main React component scope so can only be acessed there
+      const items = {
+         color:'blue',
+         size:'medium',
+         num:3.14,
+      }
+      // i destructured the object so you wont have to use items.color ...you can just go ahead and use the names itself
+      const {num,size,color} = items
+        return <h1>
+         Hello World!
+         <Display num = {num}  size = {size} color={color}/>
+         <Label  tag = {<Display/>} />
+         </h1>;
+      }}
+
+
+      class Display extends React.Component{
+         render(){
+            return(
+               <>
+               <div> {this.props.num}</div>
+               <div> {this.props.size}</div>
+               <div> {this.props.color}</div>
+               </>
+            )
+         }
+      }
+
+      class Label extends React.Component{
+         render(){
+            return(
+               /* this renders the Display but you wont see it because the props that is passed in Display is limited to it 
+          /     if i did this  in Label and called the props in Main it would display the objects too
+                    <div> {this.props.num}</div>
+                           <div> {this.props.size}</div>
+                           <div> {this.props.color}</div>
+         */
+          
+               <div> {this.props.tag}</div>
+            )
+         }
+      }
+      ReactDOM.render(<Main />, document.getElementById('mydiv'))
+    </script>
+
+  </body>
+</html>

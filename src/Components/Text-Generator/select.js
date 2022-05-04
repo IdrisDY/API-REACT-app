@@ -1,20 +1,30 @@
 import { useState } from "react"
-
-const Select =(props)=> {
-   const[option, setOption] =useState(props.value);
-
+import  React, {Component} from 'react'
+class Select extends React.Component{ 
+constructor(props){
+   super(props);
+   this.state = {
+      value:props.value
+   }
+}
    // onChange(e) {
    //    setOption(e.target.value)
    // }
+   onChange(e){
+      this.setState({value:e.target.value},function(){
+         this.props.onChange(this.state.value)
+      })
+   }
+   render(){
    return(
       <div> 
-      <select>  
-      <option value = "true"> Yes</option>
-      <option value = "false"> No </option>
+      <select onChange={this.onChange.bind(this)}>  
+      <option value = "html"> html</option>
+      <option value = "text"> text</option>
       </select>
       </div>
    )
 
-
+   }
 }
 export default Select

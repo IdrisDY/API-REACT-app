@@ -9,11 +9,13 @@ import Page from './Pagination/page';
 import TextGen from './Components/Text-Generator/text-gen';
 import Display from './Components/Text-Generator/text';
 import Facebook from './Components/Facebook-Login/facebook';
-
+import Component1 from './Components/React-Spring-Animation/Component1'
+import Comp2 from './Components/React-Spring-Animation/Component2';
+import Grow from './odd.js'
 function App() {
   return (
     <>
-    <Facebook/>
+   <Thors/>
     </>
   );
 }

@@ -11,6 +11,7 @@ export default class Facebook extends Component
       picture:''
 
    }
+/* A function that is called when the button is clicked. */
    componentClicked= ()=>{
       console.log('clicked')
    }
@@ -26,10 +27,14 @@ export default class Facebook extends Component
       if(this.state.isLoggedin){
          fbcontent = null;
  }
- else {   fbcontent = (<FacebookLogin
+/* A function that is called when the button is clicked. */
+ else {  
+    
+   fbcontent = (<FacebookLogin
    appId="738810583789550"
    autoLoad={true}
    fields="name,email,picture"
+   size= 'small'
    onClick={this.componentClicked}/>)
    console.log(fbcontent)
 }

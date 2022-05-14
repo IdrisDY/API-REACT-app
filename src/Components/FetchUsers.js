@@ -4,11 +4,16 @@ import { useState } from "react";
 const url = "https://api.github.com/users"
  export default function FetchUsers(){
 const [users, setUsers] = useState([]);
+
 const Fetch = async() =>{
-   const resp = await fetch(url);
-   const request = await resp.json()
-   console.log(request)
-   setUsers(request);
+   try{    const resp = await fetch(url);
+      const request = await resp.json()
+      setUsers(request);
+      
+   }
+   catch(err){
+      console.log(err)
+   }
 }
 useEffect(()=>{
 Fetch()
@@ -17,7 +22,6 @@ Fetch()
 <ul className="users"> 
 
  {users.map((user) => {
-console.log(user)
    const {id,login,avatar_url, html_url} = user;
 return(
    <li key={id}> 

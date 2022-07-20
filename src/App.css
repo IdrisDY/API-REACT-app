@@ -42,3 +42,7 @@ h1{
   margin-inline: auto;
   color: blue;
 }
+button{
+  background: #61dafb;
+  padding: .5em 1em;
+}
